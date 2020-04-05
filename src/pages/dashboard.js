@@ -9,6 +9,7 @@ import RouteLogin from "../components/route-login";
 import { navigate } from "gatsby";
 
 const Dashboard = ({ location }) => {
+  // on reloads/mounts , if the path matche dashboard, redirect to login, overwrite browser history
   useEffect(() => {
     if (location.pathname.match(/^\/dashboard\/?$/)) {
       navigate("/dashboard/login", { replace: true });
